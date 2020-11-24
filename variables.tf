@@ -59,6 +59,11 @@ variable "rds_engine_version" {
   type = string
 }
 
+variable "rds_major_engine_version" {
+  default = ""
+  type = string
+}
+
 variable "rds_database_name" {
   default = ""
   type = string
@@ -75,6 +80,11 @@ variable "rds_password" {
 }
 
 variable "rds_port" {
+  default = ""
+  type = string
+}
+
+variable "rds_family" {
   default = ""
   type = string
 }

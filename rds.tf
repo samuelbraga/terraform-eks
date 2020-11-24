@@ -8,17 +8,19 @@ module "rds" {
 
   identifier = local.rds_name
 
-  engine            = var.rds_engine
-  engine_version    = var.rds_engine_version
-  instance_class    = "db.t2.medium"
-  allocated_storage = 5
+  engine               = var.rds_engine
+  engine_version       = var.rds_engine_version
+  instance_class       = "db.t2.medium"
+  allocated_storage    = 5
+  family               = var.rds_family
+  major_engine_version = var.rds_major_engine_version
 
   name     = var.rds_database_name
   username = var.rds_username
   password = var.rds_password
   port     = var.rds_port
 
-  vpc_security_group_ids = module.vpc.private_subnets
+  vpc_security_group_ids = [aws_security_group.rds.id]
 
   subnet_ids = module.vpc.private_subnets
 

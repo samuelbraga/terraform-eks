@@ -27,3 +27,16 @@ resource "aws_security_group" "all_worker" {
     ]
   }
 }
+
+resource "aws_security_group" "rds" {
+  name_prefix = "sg_all_worker"
+  vpc_id      = module.vpc.vpc_id
+
+  ingress {
+    from_port = 0
+    to_port   = 3306
+    protocol  = "tcp"
+
+    cidr_blocks = var.private_subnets_cidr
+  }
+}
