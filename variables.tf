@@ -48,3 +48,33 @@ variable "map_users" {
     },
   ]
 }
+
+variable "rds_engine" {
+  default = ""
+  type = string
+}
+
+variable "rds_engine_version" {
+  default = ""
+  type = string
+}
+
+variable "rds_database_name" {
+  default = ""
+  type = string
+}
+
+variable "rds_username" {
+  default = ""
+  type = string
+}
+
+variable "rds_password" {
+  default = ""
+  type = string
+}
+
+variable "rds_port" {
+  default = ""
+  type = string
+}
