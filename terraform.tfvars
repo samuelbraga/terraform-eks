@@ -15,12 +15,3 @@ map_users       = [
     groups   = ["system:masters"]
   }
 ]
-
-rds_engine               = ""
-rds_engine_version       = ""
-rds_major_engine_version = ""
-rds_database_name        = ""
-rds_username             = ""
-rds_password             = ""
-rds_port                 = ""
-rds_family               = ""

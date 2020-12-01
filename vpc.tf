@@ -13,8 +13,9 @@ module "vpc" {
   public_subnets  = var.public_subnets_cidr
   private_subnets = var.private_subnets_cidr
 
-  enable_nat_gateway = true
-  enable_vpn_gateway = true
+  enable_nat_gateway   = true
+  single_nat_gateway   = true
+  enable_dns_hostnames = true
 
   public_subnet_tags = {
     "kubernetes.io/cluster/${local.cluster_name}" = "shared"

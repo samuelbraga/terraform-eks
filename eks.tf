@@ -24,5 +24,5 @@ module "eks" {
     }
   }
 
-  map_users                            = var.map_users
+  map_users = var.map_users
 }
